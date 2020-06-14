@@ -8,6 +8,13 @@
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
 <project name="Colour_Selector" default="default" basedir=".">
+    
+    <target name= "-post-jar">
+    <jar jarfile="${dist.jar}" update="true">
+    <zipfileset src="D:\mis programas\jnativehook\jar\jnativehook-2.1.0.jar" excludes="META-INF/*"/>
+    </jar>
+    </target>
+    
     <description>Builds, tests, and runs the project Colour Selector.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
